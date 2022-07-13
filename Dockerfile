@@ -5,7 +5,7 @@ ARG VERSION
 
 # 作者及邮箱
 # 镜像的作者和邮箱
-LABEL maintainer="544458820.com"
+LABEL maintainer="544468820.com"
 # 镜像的版本
 LABEL version=${VERSION}
 # 镜像的描述
