@@ -9,9 +9,7 @@
 ## 2. 编译
 
 ```sh
-docker build -t nnzbz/efak:2.1.0 --build-arg VERSION=2.1.0 .
-# latest
-docker tag nnzbz/efak:2.1.0 nnzbz/efak:latest
+docker build -t jiangxuhui/efak:2.0.8 --build-arg VERSION=2.0.8 .
 ```
 
 - 升级版本时注意
@@ -20,8 +18,7 @@ docker tag nnzbz/efak:2.1.0 nnzbz/efak:latest
 ## 3. 上传镜像
 
 ```sh
-docker push nnzbz/efak:2.1.0
-docker push nnzbz/efak:latest
+docker push jiangxuhui/efak:2.0.8
 ```
 
 ## 4. 创建并启动容器
@@ -32,7 +29,7 @@ docker run --name efak \
     -e TZ=CST-8 \
     -e ZK_HOSTS=172.17.0.1:2181 \
     --restart always \
-    nnzbz/efak
+    jiangxuhui/efak:2.0.8
 ```
 
 - ZK_HOSTS
