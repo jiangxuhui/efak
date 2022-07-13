@@ -5,7 +5,7 @@ ARG VERSION
 
 # 作者及邮箱
 # 镜像的作者和邮箱
-LABEL maintainer="nnzbz@163.com"
+LABEL maintainer="544458820.com"
 # 镜像的版本
 LABEL version=${VERSION}
 # 镜像的描述
@@ -21,6 +21,7 @@ COPY ${KE_NAME} ${KE_HOME}
 
 RUN \
     echo 'sed -i s/cluster1.zk.list=tdn1:2181,tdn2:2181,tdn3:2181/cluster1.zk.list=${ZK_HOSTS}/ conf/system-config.properties' >> entrypoint.sh \
+    && echo 'sed -i s/efak.zk.cluster.alias=cluster1,cluster2/efak.zk.cluster.alias=cluster1/ conf/system-config.properties' >> entrypoint.sh \
     && echo 'bin/ke.sh start' >> entrypoint.sh \
     && echo 'sleep 3' >> entrypoint.sh \
     && echo 'tail -f logs/ke_console.out' >> entrypoint.sh \
