@@ -1,7 +1,5 @@
 # efak(Eagle for Apache Kafka)
 
-## 对别人的dockerfile进行了优化，删除cluster2，否则日志一直在报错
-
 ## 1. 官网
 
 <https://www.kafka-eagle.org/>
